@@ -1,0 +1,8 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": ["resumes/*.json"],
+      "url": "./schemas/reactive-resume.schema.json"
+    }
+  ]
+}

@@ -1,0 +1,458 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Reactive Resume v4 Schema",
+  "description": "JSON Schema for Reactive Resume v4 resume data files",
+  "type": "object",
+  "required": ["basics", "summary", "sections", "metadata"],
+  "additionalProperties": true,
+  "definitions": {
+    "url": {
+      "type": "object",
+      "required": ["url", "label"],
+      "properties": {
+        "url": { "type": "string" },
+        "label": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "baseItem": {
+      "type": "object",
+      "required": ["id", "hidden"],
+      "properties": {
+        "id": { "type": "string" },
+        "hidden": { "type": "boolean" },
+        "options": {
+          "type": "object",
+          "properties": {
+            "showLinkInTitle": { "type": "boolean" }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "experienceItem": {
+      "allOf": [
+        { "$ref": "#/definitions/baseItem" },
+        {
+          "type": "object",
+          "required": ["company", "position", "location", "period", "website", "description"],
+          "properties": {
+            "id": { "type": "string" },
+            "hidden": { "type": "boolean" },
+            "options": {},
+            "company": { "type": "string", "minLength": 1 },
+            "position": { "type": "string" },
+            "location": { "type": "string" },
+            "period": { "type": "string" },
+            "website": { "$ref": "#/definitions/url" },
+            "description": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "educationItem": {
+      "allOf": [
+        { "$ref": "#/definitions/baseItem" },
+        {
+          "type": "object",
+          "required": ["school", "degree", "area", "grade", "location", "period", "website", "description"],
+          "properties": {
+            "id": { "type": "string" },
+            "hidden": { "type": "boolean" },
+            "options": {},
+            "school": { "type": "string", "minLength": 1 },
+            "degree": { "type": "string" },
+            "area": { "type": "string" },
+            "grade": { "type": "string" },
+            "location": { "type": "string" },
+            "period": { "type": "string" },
+            "website": { "$ref": "#/definitions/url" },
+            "description": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "projectItem": {
+      "allOf": [
+        { "$ref": "#/definitions/baseItem" },
+        {
+          "type": "object",
+          "required": ["name", "period", "website", "description"],
+          "properties": {
+            "id": { "type": "string" },
+            "hidden": { "type": "boolean" },
+            "options": {},
+            "name": { "type": "string", "minLength": 1 },
+            "period": { "type": "string" },
+            "website": { "$ref": "#/definitions/url" },
+            "description": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "skillItem": {
+      "allOf": [
+        { "$ref": "#/definitions/baseItem" },
+        {
+          "type": "object",
+          "required": ["name", "proficiency", "level", "keywords"],
+          "properties": {
+            "id": { "type": "string" },
+            "hidden": { "type": "boolean" },
+            "options": {},
+            "icon": { "type": "string" },
+            "name": { "type": "string", "minLength": 1 },
+            "proficiency": { "type": "string" },
+            "level": { "type": "number", "minimum": 0, "maximum": 5 },
+            "keywords": { "type": "array", "items": { "type": "string" } }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "profileItem": {
+      "allOf": [
+        { "$ref": "#/definitions/baseItem" },
+        {
+          "type": "object",
+          "required": ["network", "username", "website"],
+          "properties": {
+            "id": { "type": "string" },
+            "hidden": { "type": "boolean" },
+            "options": {},
+            "icon": { "type": "string" },
+            "network": { "type": "string", "minLength": 1 },
+            "username": { "type": "string" },
+            "website": { "$ref": "#/definitions/url" }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "awardItem": {
+      "allOf": [
+        { "$ref": "#/definitions/baseItem" },
+        {
+          "type": "object",
+          "required": ["title", "awarder", "date", "website", "description"],
+          "properties": {
+            "id": { "type": "string" },
+            "hidden": { "type": "boolean" },
+            "options": {},
+            "title": { "type": "string", "minLength": 1 },
+            "awarder": { "type": "string" },
+            "date": { "type": "string" },
+            "website": { "$ref": "#/definitions/url" },
+            "description": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "certificationItem": {
+      "allOf": [
+        { "$ref": "#/definitions/baseItem" },
+        {
+          "type": "object",
+          "required": ["title", "issuer", "date", "website", "description"],
+          "properties": {
+            "id": { "type": "string" },
+            "hidden": { "type": "boolean" },
+            "options": {},
+            "title": { "type": "string", "minLength": 1 },
+            "issuer": { "type": "string" },
+            "date": { "type": "string" },
+            "website": { "$ref": "#/definitions/url" },
+            "description": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "languageItem": {
+      "allOf": [
+        { "$ref": "#/definitions/baseItem" },
+        {
+          "type": "object",
+          "required": ["language", "fluency", "level"],
+          "properties": {
+            "id": { "type": "string" },
+            "hidden": { "type": "boolean" },
+            "options": {},
+            "language": { "type": "string", "minLength": 1 },
+            "fluency": { "type": "string" },
+            "level": { "type": "number", "minimum": 0, "maximum": 5 }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "interestItem": {
+      "allOf": [
+        { "$ref": "#/definitions/baseItem" },
+        {
+          "type": "object",
+          "required": ["name", "keywords"],
+          "properties": {
+            "id": { "type": "string" },
+            "hidden": { "type": "boolean" },
+            "options": {},
+            "icon": { "type": "string" },
+            "name": { "type": "string", "minLength": 1 },
+            "keywords": { "type": "array", "items": { "type": "string" } }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "publicationItem": {
+      "allOf": [
+        { "$ref": "#/definitions/baseItem" },
+        {
+          "type": "object",
+          "required": ["title", "publisher", "date", "website", "description"],
+          "properties": {
+            "id": { "type": "string" },
+            "hidden": { "type": "boolean" },
+            "options": {},
+            "title": { "type": "string", "minLength": 1 },
+            "publisher": { "type": "string" },
+            "date": { "type": "string" },
+            "website": { "$ref": "#/definitions/url" },
+            "description": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "volunteerItem": {
+      "allOf": [
+        { "$ref": "#/definitions/baseItem" },
+        {
+          "type": "object",
+          "required": ["organization", "location", "period", "website", "description"],
+          "properties": {
+            "id": { "type": "string" },
+            "hidden": { "type": "boolean" },
+            "options": {},
+            "organization": { "type": "string", "minLength": 1 },
+            "location": { "type": "string" },
+            "period": { "type": "string" },
+            "website": { "$ref": "#/definitions/url" },
+            "description": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "referenceItem": {
+      "allOf": [
+        { "$ref": "#/definitions/baseItem" },
+        {
+          "type": "object",
+          "required": ["name", "position", "website", "phone", "description"],
+          "properties": {
+            "id": { "type": "string" },
+            "hidden": { "type": "boolean" },
+            "options": {},
+            "name": { "type": "string", "minLength": 1 },
+            "position": { "type": "string" },
+            "website": { "$ref": "#/definitions/url" },
+            "phone": { "type": "string" },
+            "description": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "section": {
+      "type": "object",
+      "required": ["title", "columns", "hidden", "items"],
+      "properties": {
+        "title": { "type": "string" },
+        "columns": { "type": "number" },
+        "hidden": { "type": "boolean" },
+        "items": { "type": "array" }
+      }
+    }
+  },
+  "properties": {
+    "picture": {
+      "type": "object",
+      "properties": {
+        "hidden": { "type": "boolean" },
+        "url": { "type": "string" },
+        "size": { "type": "number" },
+        "rotation": { "type": "number" },
+        "aspectRatio": { "type": "number" },
+        "borderRadius": { "type": "number" },
+        "borderColor": { "type": "string" },
+        "borderWidth": { "type": "number" },
+        "shadowColor": { "type": "string" },
+        "shadowWidth": { "type": "number" }
+      }
+    },
+    "basics": {
+      "type": "object",
+      "required": ["name", "headline", "email", "phone", "location", "website"],
+      "properties": {
+        "name": { "type": "string" },
+        "headline": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "location": { "type": "string" },
+        "website": { "$ref": "#/definitions/url" },
+        "customFields": { "type": "array" }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["title", "columns", "hidden", "content"],
+      "properties": {
+        "title": { "type": "string" },
+        "columns": { "type": "number" },
+        "hidden": { "type": "boolean" },
+        "content": { "type": "string" }
+      }
+    },
+    "sections": {
+      "type": "object",
+      "properties": {
+        "profiles": {
+          "allOf": [{ "$ref": "#/definitions/section" }],
+          "properties": {
+            "title": {}, "columns": {}, "hidden": {},
+            "items": { "type": "array", "items": { "$ref": "#/definitions/profileItem" } }
+          }
+        },
+        "experience": {
+          "allOf": [{ "$ref": "#/definitions/section" }],
+          "properties": {
+            "title": {}, "columns": {}, "hidden": {},
+            "items": { "type": "array", "items": { "$ref": "#/definitions/experienceItem" } }
+          }
+        },
+        "education": {
+          "allOf": [{ "$ref": "#/definitions/section" }],
+          "properties": {
+            "title": {}, "columns": {}, "hidden": {},
+            "items": { "type": "array", "items": { "$ref": "#/definitions/educationItem" } }
+          }
+        },
+        "projects": {
+          "allOf": [{ "$ref": "#/definitions/section" }],
+          "properties": {
+            "title": {}, "columns": {}, "hidden": {},
+            "items": { "type": "array", "items": { "$ref": "#/definitions/projectItem" } }
+          }
+        },
+        "skills": {
+          "allOf": [{ "$ref": "#/definitions/section" }],
+          "properties": {
+            "title": {}, "columns": {}, "hidden": {},
+            "items": { "type": "array", "items": { "$ref": "#/definitions/skillItem" } }
+          }
+        },
+        "languages": {
+          "allOf": [{ "$ref": "#/definitions/section" }],
+          "properties": {
+            "title": {}, "columns": {}, "hidden": {},
+            "items": { "type": "array", "items": { "$ref": "#/definitions/languageItem" } }
+          }
+        },
+        "interests": {
+          "allOf": [{ "$ref": "#/definitions/section" }],
+          "properties": {
+            "title": {}, "columns": {}, "hidden": {},
+            "items": { "type": "array", "items": { "$ref": "#/definitions/interestItem" } }
+          }
+        },
+        "awards": {
+          "allOf": [{ "$ref": "#/definitions/section" }],
+          "properties": {
+            "title": {}, "columns": {}, "hidden": {},
+            "items": { "type": "array", "items": { "$ref": "#/definitions/awardItem" } }
+          }
+        },
+        "certifications": {
+          "allOf": [{ "$ref": "#/definitions/section" }],
+          "properties": {
+            "title": {}, "columns": {}, "hidden": {},
+            "items": { "type": "array", "items": { "$ref": "#/definitions/certificationItem" } }
+          }
+        },
+        "publications": {
+          "allOf": [{ "$ref": "#/definitions/section" }],
+          "properties": {
+            "title": {}, "columns": {}, "hidden": {},
+            "items": { "type": "array", "items": { "$ref": "#/definitions/publicationItem" } }
+          }
+        },
+        "volunteer": {
+          "allOf": [{ "$ref": "#/definitions/section" }],
+          "properties": {
+            "title": {}, "columns": {}, "hidden": {},
+            "items": { "type": "array", "items": { "$ref": "#/definitions/volunteerItem" } }
+          }
+        },
+        "references": {
+          "allOf": [{ "$ref": "#/definitions/section" }],
+          "properties": {
+            "title": {}, "columns": {}, "hidden": {},
+            "items": { "type": "array", "items": { "$ref": "#/definitions/referenceItem" } }
+          }
+        }
+      }
+    },
+    "customSections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "columns", "hidden", "type", "items"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "columns": { "type": "number" },
+          "hidden": { "type": "boolean" },
+          "type": {
+            "type": "string",
+            "enum": [
+              "summary", "profiles", "experience", "education", "projects",
+              "skills", "languages", "interests", "awards", "certifications",
+              "publications", "volunteer", "references", "cover-letter"
+            ]
+          },
+          "items": { "type": "array" }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["template", "layout", "css", "page", "design", "typography", "notes"],
+      "properties": {
+        "template": {
+          "type": "string",
+          "enum": [
+            "azurill", "bronzor", "chikorita", "ditgar", "ditto", "gengar",
+            "glalie", "kakuna", "lapras", "leafish", "onyx", "pikachu", "rhyhorn"
+          ]
+        },
+        "layout": { "type": "object" },
+        "css": {
+          "type": "object",
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "value": { "type": "string" }
+          }
+        },
+        "page": { "type": "object" },
+        "design": { "type": "object" },
+        "typography": { "type": "object" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}
