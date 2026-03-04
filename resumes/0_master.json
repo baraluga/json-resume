@@ -1,0 +1,374 @@
+{
+  "picture": {
+    "hidden": true,
+    "url": "",
+    "size": 80,
+    "rotation": 0,
+    "aspectRatio": 1,
+    "borderRadius": 0,
+    "borderColor": "rgba(0, 0, 0, 0.5)",
+    "borderWidth": 0,
+    "shadowColor": "rgba(0, 0, 0, 0.5)",
+    "shadowWidth": 0
+  },
+  "basics": {
+    "name": "Brian Peralta",
+    "headline": "Senior Frontend Engineer",
+    "email": "baperaltaa@gmail.com",
+    "phone": "",
+    "location": "Philippines",
+    "website": {
+      "url": "https://www.linkedin.com/in/baraluga/",
+      "label": "LinkedIn"
+    },
+    "customFields": []
+  },
+  "summary": {
+    "title": "",
+    "columns": 1,
+    "hidden": false,
+    "content": "<p>Senior Frontend Engineer with a decade driving engineering excellence across security, finance, and energy sectors. Architected 4 production Angular applications from inception, championed TDD and quality practices across a 15–20 person team, and delivered a 12x performance improvement on critical transaction workflows. Deep expertise in Angular, TypeScript, TDD, and modern development workflows including AI-assisted development.</p>"
+  },
+  "sections": {
+    "profiles": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "experience": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "019c57ae-86e6-773f-ab80-0b6f7497763e",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": false
+          },
+          "company": "Engie Services",
+          "position": "Senior Software Engineer",
+          "location": "",
+          "period": "August 2018 - Present",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<p>Promoted internally from Software Engineer. Led frontend architecture and engineering excellence initiatives across a 15–20 person team.</p><p><em>Technical Leadership &amp; Architecture</em></p><ul><li><p>Architected 4 Angular applications from inception—all in production—driving full-stack design decisions including BFF (Backend for Frontend) patterns and API contracts between frontend and Python/FastAPI services</p></li><li><p>Championed Tracer Bullet Development methodology, prioritizing CI/CD pipelines and walking skeleton architecture to ensure end-to-end integration from day one</p></li><li><p>Designed and implemented progressive save architecture to handle complex, large-payload transactions by decomposing operations into granular chunks triggered by user interactions—reducing wait times from 45–60 seconds to 2–5 seconds per transaction</p></li><li><p>Collaborated across full stack (Angular, Python/FastAPI, AWS) to establish scalable system architecture and deployment strategies</p></li></ul><p><em>Engineering Excellence</em></p><ul><li><p>Sole champion of quality practices in the team—introduced strict TDD methodology, comprehensive ESLint configurations, Git hooks, and automated quality gates in CI/CD pipelines at a time when tests were routinely cut to save budget</p></li><li><p>Drove adoption of coverage thresholds and behavior-driven testing approaches, raising the quality bar across the entire frontend codebase</p></li><li><p>Established engineering standards that became organizational best practices, with influence extending beyond the frontend team</p></li></ul><p><em>Team Development</em></p><ul><li><p>Mentored 3–6 engineers per project on clean code principles, testing strategies, and architectural decision-making</p></li><li><p>Championed modern development practices including AI-assisted workflows (Cursor, Claude Code, ChatGPT) for accelerated prototyping and refactoring</p></li></ul>"
+        }
+      ]
+    },
+    "education": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "019c57ae-86e7-758b-9031-a1b2c3d4e5f6",
+          "hidden": false,
+          "school": "Mapua University",
+          "degree": "BS Computer Science",
+          "area": "",
+          "grade": "",
+          "location": "",
+          "period": "2008 - 2013",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": ""
+        }
+      ]
+    },
+    "projects": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "skills": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "019c57ae-86e7-758b-9031-ea489f34b4c3",
+          "hidden": false,
+          "icon": "star",
+          "name": "Engineering Practices",
+          "proficiency": "",
+          "level": 5,
+          "keywords": [
+            "Test-Driven Development (TDD)",
+            "Clean Code",
+            "CI/CD pipeline design",
+            "Code quality automation",
+            "Tracer Bullet Development",
+            "Backend-For-Frontend"
+          ]
+        },
+        {
+          "id": "019c57ae-86e7-758b-9031-ec1a2a95e9d1",
+          "hidden": false,
+          "icon": "star",
+          "name": "Technologies",
+          "proficiency": "",
+          "level": 5,
+          "keywords": [
+            "Angular",
+            "TypeScript",
+            "RxJS",
+            "Jest",
+            "Cypress",
+            "Vitest",
+            "Playwright"
+          ]
+        },
+        {
+          "id": "019c57ae-86e7-758b-9031-e7dd36256c91",
+          "hidden": true,
+          "icon": "star",
+          "name": "Frontend Architecture",
+          "proficiency": "",
+          "level": 4,
+          "keywords": [
+            "Micro-frontend patterns",
+            "Performance optimization",
+            "Component-driven design",
+            "Progressive loading strategies"
+          ]
+        },
+        {
+          "id": "019c57ae-86e7-758b-9031-f265df980c7e",
+          "hidden": false,
+          "icon": "star",
+          "name": "Leadership",
+          "proficiency": "",
+          "level": 4,
+          "keywords": [
+            "Technical mentoring",
+            "Engineering standards development",
+            "Cross-functional collaboration"
+          ]
+        },
+        {
+          "id": "019c57ae-86e7-758b-9031-f6911d1f3b5a",
+          "hidden": false,
+          "icon": "star",
+          "name": "Specialized Knowledge",
+          "proficiency": "",
+          "level": 3,
+          "keywords": [
+            "Cryptographic systems",
+            "Financial infrastructure",
+            "AI-powered development"
+          ]
+        }
+      ]
+    },
+    "languages": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "interests": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "awards": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "certifications": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "publications": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "volunteer": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "references": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    }
+  },
+  "customSections": [
+    {
+      "title": "Experience",
+      "columns": 1,
+      "hidden": false,
+      "id": "019c57b4-6015-7468-b18e-1f3eb034ab33",
+      "type": "experience",
+      "items": [
+        {
+          "id": "019c57ae-86e7-758b-9031-d60b047e9815",
+          "hidden": false,
+          "company": "Willis Towers Watson",
+          "position": "Data Calculation Developer (L2)",
+          "location": "",
+          "period": "February 2018 - July 2018",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<ul><li><p>Contributed to Python-based actuarial calculation systems and data processing applications</p></li></ul>"
+        },
+        {
+          "id": "019c57ae-86e7-758b-9031-cd60c25378b7",
+          "hidden": false,
+          "company": "Finastra",
+          "position": "Software Engineer II",
+          "location": "",
+          "period": "March 2016 - January 2018",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<p>Built Java-based frontend solutions across two core products at a global fintech leader.</p><ul><li><p>Developed interfaces for a bank-to-bank transaction system and a payment portal processing SWIFT transactions between financial institutions</p></li><li><p>Worked on mission-critical financial infrastructure demanding high reliability, security, and regulatory compliance</p></li></ul>"
+        },
+        {
+          "id": "019c57ae-86e7-758b-9031-d3c1927e0937",
+          "hidden": false,
+          "company": "Gemalto Technologies",
+          "position": "Software Developer Engineer",
+          "location": "",
+          "period": "July 2013 - January 2016",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<p>Built internal tooling for smart card security systems in small teams of 3–7 using Java Eclipse RCP.</p><ul><li><p>Contributed to smart card application management tooling supporting 3–5 card applications</p></li><li><p>Worked on a communication tracing tool used to log and monitor data exchange between smart cards</p></li><li><p>Gained hands-on expertise in cryptographic implementations, security architecture, and sensitive data handling</p></li></ul>"
+        }
+      ]
+    },
+    {
+      "title": "Highlights",
+      "columns": 1,
+      "hidden": false,
+      "id": "019c57b8-b4e0-753b-9d0c-c231d6da2725",
+      "type": "projects",
+      "items": [
+        {
+          "id": "019c57ae-86e7-758b-9031-db73923684c5",
+          "hidden": false,
+          "name": "Engineering Standards Leadership",
+          "period": "",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<p>Sole champion of quality in a 15–20 person team—introduced TDD, coverage thresholds, ESLint standards, Git hooks, and CI/CD quality gates that became organizational best practices</p>"
+        },
+        {
+          "id": "019c57ae-86e7-758b-9031-df4006fdb7b6",
+          "hidden": false,
+          "name": "Architectural Impact",
+          "period": "",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<p>Designed progressive save architecture that reduced transaction wait times from 45–60 seconds to 2–5 seconds in enterprise energy applications</p>"
+        },
+        {
+          "id": "019c57ae-86e7-758b-9031-e230d042824e",
+          "hidden": false,
+          "name": "Technical Depth",
+          "period": "",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<p>10+ years spanning smart card cryptographic systems, SWIFT interbank payment infrastructure, and enterprise energy sector applications—4 production apps architected from inception</p>"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "template": "glalie",
+    "layout": {
+      "sidebarWidth": 30,
+      "pages": [
+        {
+          "fullWidth": false,
+          "main": [
+            "profiles",
+            "summary",
+            "education",
+            "experience",
+            "volunteer",
+            "references",
+            "certifications",
+            "awards",
+            "languages",
+            "interests",
+            "publications"
+          ],
+          "sidebar": ["skills"]
+        },
+        {
+          "fullWidth": false,
+          "main": ["019c57b4-6015-7468-b18e-1f3eb034ab33", "projects"],
+          "sidebar": ["019c57b8-b4e0-753b-9d0c-c231d6da2725"]
+        }
+      ]
+    },
+    "css": {
+      "enabled": false,
+      "value": ""
+    },
+    "page": {
+      "gapX": 8,
+      "gapY": 8,
+      "marginX": 16,
+      "marginY": 24,
+      "format": "a4",
+      "locale": "en-US",
+      "hideIcons": false
+    },
+    "design": {
+      "level": {
+        "icon": "acorn",
+        "type": "rectangle"
+      },
+      "colors": {
+        "primary": "rgb(8, 57, 163)",
+        "text": "rgba(0, 0, 0, 1)",
+        "background": "rgba(255, 255, 255, 1)"
+      }
+    },
+    "typography": {
+      "body": {
+        "fontFamily": "Inter",
+        "fontWeights": ["400", "600"],
+        "fontSize": 10,
+        "lineHeight": 1.5
+      },
+      "heading": {
+        "fontFamily": "Inter",
+        "fontWeights": ["400", "600"],
+        "fontSize": 16,
+        "lineHeight": 1.5
+      }
+    },
+    "notes": ""
+  }
+}
